@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             intro.style.display = "none";
             site.style.display = "block";
-            initScrollAnimations(); 
+            initScrollAnimations();
         }, 1200);
     }, 3800);
 });
@@ -101,5 +101,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: "smooth"
             });
         }
+    });
+});
+
+// ===============================
+// FAQ ACCORDION
+// ===============================
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentNode;
+        item.classList.toggle('active');
     });
 });
